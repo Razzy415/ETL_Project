@@ -1,5 +1,8 @@
 # ETL_Project
 
+# Managram: Shuffling Magic: The Gathering Cards into The Modern Economy
+![alt text](https://github.com/Razzy415/ETL_Project/blob/master/MTG.png)
+
 # Background
 A strategy card game created by Dr. Richard Garfield, a mathematics professor and game designer, in 1993. Since it’s first core set, Alpha, Magic: The Gathering (MTG) now holds seven total world records and currently played in eleven languages globally with over 35 million players worldwide as of December 2018 according to Business Insider. 
 
