@@ -2,7 +2,7 @@ Create database mtg_etl;
 use mtg_etl;
 ALTER DATABASE mtg_etl CHARACTER SET utf8 COLLATE utf8_general_ci;
 CREATE TABLE core_card_objects (
-  oracle_id INT PRIMARY KEY,
+  oracle_id INT PRIMARY KEY
   
   name TEXT
 );
@@ -19,7 +19,7 @@ CREATE TABLE set_description (
   FOREIGN KEY (oracle_id) REFERENCES core_card_objects (oracle_id)
 );
 CREATE TABLE price (
-  id int PRIMARY KEY,
+  id int Not Null AUTO_INCREMENT,
   productid int,
   mtg_subTypeName varchar(500),
   highprice	 decimal(10,2),
@@ -28,6 +28,7 @@ CREATE TABLE price (
   midprice decimal(10,2),
   directLowPrice	decimal(10,2),
   FOREIGN KEY (productid) REFERENCES set_description(productid)
+  PRIMARY KEY (id)
 );
 
 SELECT p.lowprice,c.name,s.set_name from price p  inner join set_description s on s.productid=p.productid
