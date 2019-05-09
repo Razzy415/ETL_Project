@@ -16,7 +16,8 @@ Catering to collectors and hobbyists, to start a game of Magic, a player would h
 
 # Challenges
 - Deleting duplicate entries to maintain a unique oracle_id, and productid while matching producid with a specific oracle_id to obtain prices via API calls.
-- API calls for 40000+ rows took the most amount of time, approx 30mins.
+- API calls for 40000+ rows took the most amount of time, approx 30mins and only 6000 productid information was obtain due to API call limitation.
 
 # Future Considerations
+- For anything more than 6000 productid, we have to do batch API calls. For this specific dataset, we could have cut the dataframe that holds productid and create 7 batches.
 - Create a flask app that runs the API call script on a specific schedule and load to database to update prices table.
